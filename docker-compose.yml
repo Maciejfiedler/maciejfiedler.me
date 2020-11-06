@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+
+  webserver:
+    build:
+      context: ./webserver
+    ports:
+      - 80:80
+      - 443:443
+    container_name: webserver
+    networks:
+      website:
+        ipv4_address: 172.26.0.101
+
+networks:
+  website:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.26.0.0/24
