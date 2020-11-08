@@ -1,7 +1,12 @@
 <template>
   <c-dark-mode>
-    <c-box p="20px" w="100vw" h="100vh" bg="blue.800" color="white">
-      <c-box p="20px" bg="blue.900" borderRadius="15px">
+    <c-box
+      p="20px"
+      w="100vw"
+      h="100vh"
+      bgImage="url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=jeremy-perkins-uhjiu8FjnsQ-unsplash.jpg')"
+    >
+      <c-box p="20px" bg="black" color="white" borderRadius="15px">
         <c-stack spacing="2">
           <c-heading as="h1" textAlign="center">Status:</c-heading>
           <c-code fontSize="48px" textAlign="center">Good Good </c-code>
