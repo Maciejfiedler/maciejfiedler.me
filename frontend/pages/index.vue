@@ -83,9 +83,8 @@
   ></c-light-mode>
 </template>
 
-<script lang="ts">
+<script lang="js">
 /* eslint-disable vue/no-unused-components */
-
 import Chakra from '@chakra-ui/vue'
 
 export default {
