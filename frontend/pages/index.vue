@@ -87,7 +87,6 @@
 <script lang="js">
 /* eslint-disable vue/no-unused-components */
 import Chakra from '@chakra-ui/vue'
-
 export default {
   name: 'App',
   head() {
