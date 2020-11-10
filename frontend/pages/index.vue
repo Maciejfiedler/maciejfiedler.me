@@ -12,7 +12,9 @@
             <c-heading as="h2" size="xl">Interests:</c-heading>
             <c-text fontSize="xl"
               >Backend Systems, Overwatch, Tennis, Physics, Ju-Jitsu, Astronomy,
-              Music
+              Design, Linux, Music, PCs, Minecraft, Learning Programming
+              languages and technologies, New technologies(RISC-V, Quantum
+              Computing etc.)
             </c-text>
             <!-- inplement API request here -->
           </c-stack>
