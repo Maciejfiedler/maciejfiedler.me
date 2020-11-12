@@ -2,6 +2,7 @@ version: "3"
 
 services:
   frontend:
+    privileged: true
     build:
       context: ./frontend
     ports:
@@ -14,6 +15,7 @@ services:
       - webserver
 
   webserver:
+    privileged: true
     build:
       context: ./webserver
     ports:
