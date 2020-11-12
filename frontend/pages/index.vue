@@ -39,15 +39,6 @@
             <c-link
               textAlign="center"
               is-external
-              fontSize="lg"
-              href="https://www.instagram.com/maciej.me/"
-              color="pink.400"
-              role="Lead to Instagram Account"
-              >Instagramm</c-link
-            >
-            <c-link
-              textAlign="center"
-              is-external
               role="Lead to Github Account"
               fontSize="lg"
               href="https://github.com/Maciejfiedler"
