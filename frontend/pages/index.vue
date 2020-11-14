@@ -5,11 +5,19 @@
         <c-box p="20px" maxW="1000px">
           <c-stack spacing="2" pr="20px" pl="20px" textAlign="center">
             <c-heading as="h1" size="2xl">Maciej Fiedler</c-heading>
-            <c-heading as="h2" size="xl">Status:</c-heading>
+            <c-heading as="h2" size="xl">Status</c-heading>
             <c-code variant-color="blue" fontSize="40px">Good </c-code>
             <!-- inplement API request here -->
             <br />
-            <c-heading as="h2" size="xl">Interests:</c-heading>
+            <c-heading as="h2" size="xl">Description</c-heading>
+            <c-text fontSize="xl">
+              My name is Maciej Fiedler. I am 15 years old and i like to
+              programm. Besides programming I also do Ju-Jitsu, play Tennis and
+              Videogames.
+            </c-text>
+            <br />
+            <c-heading as="h2" size="xl">Interests</c-heading>
+            <!-- inplement API request here -->
             <c-text fontSize="xl">
               Backend Systems, Overwatch, Tennis, Physics, Ju-Jitsu, Design,
               Linux, Music, PCs, Minecraft, Learning Programming languages and
