@@ -5,26 +5,10 @@ services:
     privileged: true
     build:
       context: ./frontend
-    ports:
-      - 3005:3000
     container_name: frontend
     networks:
       website:
         ipv4_address: 172.26.0.102
-    depends_on:
-      - webserver
-
-  webserver:
-    privileged: true
-    build:
-      context: ./webserver
-    ports:
-      - 809:80
-      - 443:443
-    container_name: webserver
-    networks:
-      website:
-        ipv4_address: 172.26.0.101
 
 networks:
   website:
