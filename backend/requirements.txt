@@ -2,3 +2,4 @@ Flask==1.1.2
 graphene==2.1.8
 Flask-GraphQL==2.0.1
 redis==3.5.3
+gunicorn==20.0.4

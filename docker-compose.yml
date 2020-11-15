@@ -6,7 +6,8 @@ services:
     build:
       context: ./database
     container_name: database
-
+    ports: 
+      - 6379:6379
     networks:
       website:
         ipv4_address: 172.26.0.104
@@ -15,10 +16,8 @@ services:
     build:
       context: ./backend
     container_name: backend
-    ports:
+    ports: 
       - 5000:5000
-    expose:
-      - 5000
     networks:
       website:
         ipv4_address: 172.26.0.103
@@ -30,6 +29,8 @@ services:
     build:
       context: ./frontend
     container_name: frontend
+    ports: 
+      - 3000:3000
     networks:
       website:
         ipv4_address: 172.26.0.102

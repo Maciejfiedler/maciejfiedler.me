@@ -8,7 +8,16 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
+ENV HOST 0.0.0.0
+
+EXPOSE 5000
+
 #Dev
-RUN export FLASK_APP=app
-RUN export FLASK_ENV=development
-CMD [ "python", "-m", "flask", "run" ]
+
+#CMD [ "python", "-m", "flask", "run" ]
+
+#Prod
+
+
+
+CMD [ "gunicorn", "--bind", "0.0.0.0:5000", "start:app" ]
