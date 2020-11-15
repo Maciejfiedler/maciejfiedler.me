@@ -9,7 +9,7 @@ def create_app():
     app.register_blueprint(admin.bp)
 
     # API
-    from . import api
-    app.register_blueprint(api.bp)
+    #from . import api
+    # app.register_blueprint(api.bp)
 
     return app
