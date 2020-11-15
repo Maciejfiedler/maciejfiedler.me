@@ -1,0 +1,17 @@
+
+
+app/venv/
+
+app/*.pyc
+app/__pycache__/
+
+app/instance/
+
+app/.pytest_cache/
+app/.coverage
+app/htmlcov/
+
+app/dist/
+app/build/
+app/*.egg-info/
+
