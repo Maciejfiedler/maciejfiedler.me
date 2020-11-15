@@ -1,27 +1,24 @@
 from flask import Blueprint
 from flask_graphql import GraphQLView
 import graphene
+from . import database as db
 
 bp = Blueprint('api', __name__, url_prefix='/api')
 
 
 class Query(graphene.ObjectType):
-    redis_status = graphene.String()
-    redis_description = graphene.String()
-    redis_intrests = graphene.String()
+    my_status = graphene.String()
+    my_description = graphene.String()
+    my_intrests = graphene.String()
 
-    def resolve_redis_status(self, info):
-        return "Good"
+    def resolve_my_status(self, info):
+        return f'{db.r.get("my_status")}'
 
-    def resolve_redis_description(self, info):
-        return """My name is Maciej Fiedler. I am 15 years old and i like to
-        programm. Besides programming I also do Ju-Jitsu, play Tennis and
-        Videogames."""
+    def resolve_my_description(self, info):
+        return f'{db.r.get("my_description")}'
 
-    def resolve_redis_intrests(self, info):
-        return """Backend Systems, Overwatch, Tennis, Physics, Ju-Jitsu, Design,
-              Linux, Music, PCs, Minecraft, Learning Programming languages and
-              technologies, New technologies(RISC-V, Quantum Computing etc.)"""
+    def resolve_my_intrests(self, info):
+        return f'{db.r.get("my_interests")}'
 
 
 schema = graphene.Schema(query=Query)
@@ -38,8 +35,8 @@ bp.add_url_rule('/', view_func=GraphQLView.as_view(
 def result():
     return f"""{schema.execute('''
   query {
-    redisStatus,
-    redisDescription,
-    redisIntrests
+    myStatus,
+    myDescription,
+    myIntrests
   }
 ''')}"""

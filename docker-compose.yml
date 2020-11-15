@@ -5,29 +5,28 @@ services:
   database:
     build:
       context: ./database
-    ports:
-      - 6379:6379
     container_name: database
 
     networks:
-      mynet:
-        ipv4_address: 172.2.0.104
+      website:
+        ipv4_address: 172.26.0.104
 
   backend:
     build:
       context: ./backend
+    container_name: backend
     ports:
       - 5000:5000
-    container_name: backend
+    expose:
+      - 5000
     networks:
-      mynet:
+      website:
         ipv4_address: 172.26.0.103
     depends_on:
       - database
 
         
   frontend:
-    privileged: true
     build:
       context: ./frontend
     container_name: frontend
