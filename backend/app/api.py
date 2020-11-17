@@ -1,7 +1,8 @@
 from flask import Blueprint
 from flask_graphql import GraphQLView
 import graphene
-from . import database as db
+
+from . import db
 
 bp = Blueprint('api', __name__, url_prefix='/api')
 

@@ -1,11 +1,16 @@
 from flask import Flask
+import flask_login
+
+from . import api
+from . import auth
 
 
-def create_app():
-    app = Flask(__name__)
+app = Flask(__name__)
+app.secret_key = 'super secret string'
 
-    # API
-    from . import api
-    app.register_blueprint(api.bp)
+# Registrations
+app.register_blueprint(api.bp)
 
-    return app
+
+if __name__ == "__main__":
+    app.run()
