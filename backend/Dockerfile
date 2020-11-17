@@ -20,4 +20,4 @@ EXPOSE 5000
 
 
 
-CMD [ "gunicorn", "--bind", "0.0.0.0:5000", "start:app" ]
+CMD [ "gunicorn", "--bind", "0.0.0.0:5000", "setup:app" ]
