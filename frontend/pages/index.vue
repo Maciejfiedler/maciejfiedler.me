@@ -6,23 +6,15 @@
           <c-stack spacing="2" pr="20px" pl="20px" textAlign="center">
             <c-heading as="h1" size="2xl">Maciej Fiedler</c-heading>
             <c-heading as="h2" size="xl">Status</c-heading>
-            <c-code variant-color="blue" fontSize="40px">Good </c-code>
+            <c-code variant-color="blue" fontSize="40px">{{ myStatus }}</c-code>
             <!-- inplement API request here -->
             <br />
             <c-heading as="h2" size="xl">Description</c-heading>
-            <c-text fontSize="xl">
-              My name is Maciej Fiedler. I am 15 years old and i like to
-              programm. Besides programming I also do Ju-Jitsu, play Tennis and
-              Videogames.
-            </c-text>
+            <c-text fontSize="xl">{{ myDescription }}</c-text>
             <br />
             <c-heading as="h2" size="xl">Interests</c-heading>
             <!-- inplement API request here -->
-            <c-text fontSize="xl">
-              Backend Systems, Overwatch, Tennis, Physics, Ju-Jitsu, Design,
-              Linux, Music, PCs, Minecraft, Learning Programming languages and
-              technologies, New technologies(RISC-V, Quantum Computing etc.)
-            </c-text>
+            <c-text fontSize="xl">{{ myInterests }}</c-text>
             <!-- inplement API request here -->
           </c-stack>
           <br />
@@ -85,6 +77,8 @@
 <script lang="js">
 /* eslint-disable vue/no-unused-components */
 import Chakra from '@chakra-ui/vue'
+import gql from "graphql-tag";
+
 export default {
   name: 'App',
   head() {
@@ -114,5 +108,16 @@ export default {
     Chakra,
   },
   inject: ['$chakraColorMode', '$toggleColorMode'],
+  apollo: {
+    myStatus: gql`query getStatus{
+      myStatus
+    }`,
+    myDescription: gql`query getDescription{
+      myDescription
+    }`,
+    myInterests: gql`query getInterests{
+      myInterests
+    }`,
+  }
 }
 </script>

@@ -1,10 +1,12 @@
 from flask import Blueprint
 from flask_graphql import GraphQLView
 import graphene
+from flask_cors import CORS
 
 from . import db
 
 bp = Blueprint('api', __name__, url_prefix='/api')
+CORS(bp)
 
 
 class Query(graphene.ObjectType):
@@ -27,6 +29,5 @@ schema = graphene.Schema(query=Query)
 bp.add_url_rule('/', view_func=GraphQLView.as_view(
     'graphql',
     schema=schema,
-    batch=True,
-    graphiql=True
+    batch=True
 ))

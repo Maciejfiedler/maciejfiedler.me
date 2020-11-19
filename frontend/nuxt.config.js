@@ -28,6 +28,7 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    '@nuxtjs/apollo',
     // https://go.nuxtjs.dev/chakra
     '@chakra-ui/nuxt',
     // https://go.nuxtjs.dev/emotion
@@ -36,4 +37,12 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'http://172.26.0.103:5000/api/',
+      }
+    }
+  },
 }
