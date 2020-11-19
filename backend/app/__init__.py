@@ -1,9 +1,8 @@
 from flask import Flask, redirect, request, url_for
 import flask_login
 import flask_admin
-from flask_admin.contrib import rediscli
 
-from .admin import MyAdminIndexView
+from .admin import MyAdminIndexView, RedisCli
 from . import api
 from . import auth
 from . import db
@@ -20,6 +19,7 @@ def create_app():
     login_manager.init_app(app)
 
     admin = flask_admin.Admin(app, "Admin", index_view=MyAdminIndexView())
+    admin.add_view(RedisCli(db.r))
 
     # Functions
     @login_manager.user_loader
@@ -29,10 +29,6 @@ def create_app():
     @login_manager.request_loader
     def request_loader(request):
         return auth.request_loader(request)
-
-    @login_manager.unauthorized_handler
-    def unauthorized_handler():
-        return auth.unauthorized_handler()
 
     # Routes
     @app.route('/login', methods=['GET', 'POST'])

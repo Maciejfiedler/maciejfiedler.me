@@ -64,15 +64,3 @@ def login():
 def logout():
     flask_login.logout_user()
     return 'Logged out'
-
-
-# @login_manager.unauthorized_handler
-def unauthorized_handler():
-    return "You're not logged in :("
-
-
-def is_logged_in():
-    if flask_login.current_user.is_authenticated:
-        return True
-    else:
-        return False
