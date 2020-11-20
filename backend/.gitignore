@@ -1,17 +1,18 @@
 
 
-app/venv/
+venv/
 
-app/*.pyc
-app/__pycache__/
+*.pyc
+__pycache__/
 
-app/instance/
+instance/
 
-app/.pytest_cache/
-app/.coverage
-app/htmlcov/
+.pytest_cache/
+.coverage
+htmlcov/
 
-app/dist/
-app/build/
-app/*.egg-info/
+dist/
+build/
+*.egg-info/
 
+users.json

@@ -1,8 +1,12 @@
 from flask import redirect, request, url_for
 import flask_login
+import json
 
+with open('users.json') as myfile:
+    jsonfile = myfile.read()
 
-users = {'foo@bar.tld': {'password': 'secret'}}
+loadedjson = json.loads(jsonfile)
+users = loadedjson['users']
 
 
 class User(flask_login.UserMixin):

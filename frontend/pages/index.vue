@@ -74,10 +74,10 @@
   ></c-light-mode>
 </template>
 
-<script lang="js">
+<script lang="ts">
 /* eslint-disable vue/no-unused-components */
 import Chakra from '@chakra-ui/vue'
-import gql from "graphql-tag";
+import gql from 'graphql-tag'
 
 export default {
   name: 'App',
@@ -109,15 +109,21 @@ export default {
   },
   inject: ['$chakraColorMode', '$toggleColorMode'],
   apollo: {
-    myStatus: gql`query getStatus{
-      myStatus
-    }`,
-    myDescription: gql`query getDescription{
-      myDescription
-    }`,
-    myInterests: gql`query getInterests{
-      myInterests
-    }`,
-  }
+    myStatus: gql`
+      query getStatus {
+        myStatus
+      }
+    `,
+    myDescription: gql`
+      query getDescription {
+        myDescription
+      }
+    `,
+    myInterests: gql`
+      query getInterests {
+        myInterests
+      }
+    `,
+  },
 }
 </script>
