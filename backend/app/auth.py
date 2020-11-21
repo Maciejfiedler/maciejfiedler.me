@@ -56,11 +56,16 @@ def login():
                '''
 
     email = request.form['email']
-    if request.form['password'] == users[email]['password']:
-        user = User()
-        user.id = email
-        flask_login.login_user(user)
-        return redirect('admin')
+    if email in users:
+        if request.form['password'] == users[email]['password']:
+            user = User()
+            user.id = email
+            flask_login.login_user(user)
+            return redirect(url_for('admin.index'))
+        else:
+            return 'Bad password'
+    else:
+        return 'Bad email'
 
     return 'Bad login'
 

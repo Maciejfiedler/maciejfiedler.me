@@ -61,7 +61,7 @@
               role="Lead to my Email"
               fontSize="lg"
               href="mailto:maciek.fiedler@gmail.com"
-              color="blue.300"
+              color="blue.400"
               >maciek.fiedler@gmail.com</c-link
             ></c-flex
           >

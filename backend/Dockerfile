@@ -12,12 +12,10 @@ ENV HOST 0.0.0.0
 
 EXPOSE 5000
 
-#Dev
+# Dev
 
-#CMD [ "python", "-m", "flask", "run" ]
+# CMD [ "python", "-m", "flask", "run" ]
 
-#Prod
-
-
+# Prod
 
 CMD [ "gunicorn", "--bind", "0.0.0.0:5000", "setup:app" ]

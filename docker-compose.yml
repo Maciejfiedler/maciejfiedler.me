@@ -37,6 +37,19 @@ services:
     depends_on:
       - backend
 
+  webserver:
+    build: 
+      context: ./webserver
+    container_name: webserver
+    ports: 
+      - 80:80
+      - 443:443
+    networks: 
+      website:
+        ipv4_address: 172.26.0.101
+    depends_on: 
+      - frontend
+
 networks:
   website:
     driver: bridge

@@ -31,6 +31,7 @@ def create_app():
         return auth.request_loader(request)
 
     # Routes
+
     @app.route('/login', methods=['GET', 'POST'])
     def login():
         return auth.login()

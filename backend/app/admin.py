@@ -129,7 +129,7 @@ class RedisCli(BaseView):
     @expose('/run/', methods=('POST',))
     def execute_view(self):
         try:
-            cmd = request.form.get('cmd').lower()
+            cmd = request.form.get('cmd')
             if not cmd:
                 return self._error('Cli: Empty command.')
 
