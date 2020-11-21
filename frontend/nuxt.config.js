@@ -41,7 +41,7 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'http://172.26.0.103:5000/api/',
+        httpEndpoint: 'https://172.26.0.101/api/',
       }
     }
   },
