@@ -1,21 +1,20 @@
 <template>
   <c-light-mode>
-    <c-box p="20px" bg="blue.50">
+    <c-box p="20px" height="100vh" bg="green.50">
       <c-flex align="center" justify="center">
         <c-box p="20px" maxW="1000px">
           <c-stack spacing="2" pr="20px" pl="20px" textAlign="center">
             <c-heading as="h1" size="2xl">Maciej Fiedler</c-heading>
             <c-heading as="h2" size="xl">Status</c-heading>
-            <c-code variant-color="blue" fontSize="40px">{{ myStatus }}</c-code>
-            <!-- inplement API request here -->
+            <c-code variant-color="green" fontSize="40px">{{
+              myStatus
+            }}</c-code>
             <br />
             <c-heading as="h2" size="xl">Description</c-heading>
             <c-text fontSize="xl">{{ myDescription }}</c-text>
             <br />
             <c-heading as="h2" size="xl">Interests</c-heading>
-            <!-- inplement API request here -->
             <c-text fontSize="xl">{{ myInterests }}</c-text>
-            <!-- inplement API request here -->
           </c-stack>
           <br />
           <c-heading as="h2" size="xl" textAlign="center">Social</c-heading>
@@ -60,18 +59,10 @@
               >Github Repository</c-link
             >
           </c-flex>
-
-          <c-image
-            p="20px"
-            w="600px"
-            mr="auto"
-            ml="auto"
-            src="https://raw.githubusercontent.com/Maciejfiedler/maciejfiedler.me/main/Assets/Logo%20(high%20resolution).png"
-            alt="Logo, a duck on a star background"
-            role="Show the Logo of the page"
-          /> </c-box
-      ></c-flex> </c-box
-  ></c-light-mode>
+        </c-box></c-flex
+      >
+    </c-box></c-light-mode
+  >
 </template>
 
 <script lang="ts">
