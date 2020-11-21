@@ -47,9 +47,11 @@ def login():
     if request.method == 'GET':
         return '''
                <form action='login' method='POST'>
-                <input type='text' name='email' id='email' placeholder='email'/>
-                <input type='password' name='password' id='password' placeholder='password'/>
-                <input type='submit' name='submit'/>
+                <label for="fname">Email</label><br>
+                <input type='text' name='email' id='email'/><br>
+                <label for="fname">Password</label><br>
+                <input type='password' name='password' id='password'/><br>
+                <input type="submit" value="Submit">
                </form>
                '''
 

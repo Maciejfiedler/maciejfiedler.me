@@ -38,6 +38,15 @@
             <c-link
               textAlign="center"
               is-external
+              fontSize="lg"
+              href="https://www.instagram.com/maciej.me/"
+              color="pink.400"
+              role="Lead to Instagram Account"
+              >Instagram</c-link
+            >
+            <c-link
+              textAlign="center"
+              is-external
               role="Lead to Github Account"
               fontSize="lg"
               href="https://github.com/Maciejfiedler"
@@ -45,6 +54,17 @@
               >Github</c-link
             >
           </c-stack>
+          <c-flex align="center" justify="center">
+            <c-link
+              textAlign="center"
+              is-external
+              role="Lead to my Email"
+              fontSize="lg"
+              href="mailto:maciek.fiedler@gmail.com"
+              color="blue.300"
+              >maciek.fiedler@gmail.com</c-link
+            ></c-flex
+          >
           <br />
           <c-flex align="center" justify="center">
             <c-link
