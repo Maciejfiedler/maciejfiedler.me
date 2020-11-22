@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="href="{{ url_for('static', filename='/styles.css') }}"">
+    <title>Login to Admin</title>
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <div style="
+    padding: 8px;
+    margin: auto;
+    width: 250px;">
+        <form action='login' method='POST'>
+            <label for="email">Email:</label><br>
+            <input type='text' name='email' id='email' style="width: 250px;"/><br>
+            <label for="password">Password:</label><br>
+            <input type='password' name='password' id='password' style="width: 250px;"/><br>
+            <input type="submit" value="Submit" style="display: block; margin: 8px auto;">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul style="list-style-type: none; padding: 0;">
+                        {% for message in messages %}
+                            <li style="color: red; font-size: small; text-align: center;">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+        </form>
+
+    </div>
+</body>
+</html>

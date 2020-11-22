@@ -6,9 +6,7 @@
           <c-stack spacing="2" pr="20px" pl="20px" textAlign="center">
             <c-heading as="h1" size="2xl">Maciej Fiedler</c-heading>
             <c-heading as="h2" size="xl">Status</c-heading>
-            <c-code variant-color="green" fontSize="40px">{{
-              myStatus
-            }}</c-code>
+            <c-code variant-color="green" fontSize="4xl">{{ myStatus }}</c-code>
             <br />
             <c-heading as="h2" size="xl">Description</c-heading>
             <c-text fontSize="xl">{{ myDescription }}</c-text>
@@ -118,7 +116,6 @@ export default {
   components: {
     Chakra,
   },
-  inject: ['$chakraColorMode', '$toggleColorMode'],
   apollo: {
     myStatus: gql`
       query getStatus {
@@ -138,3 +135,9 @@ export default {
   },
 }
 </script>
+
+<style>
+body {
+  background: #e2fbed;
+}
+</style>

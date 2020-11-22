@@ -1,4 +1,4 @@
-from flask import redirect, request, url_for
+from flask import redirect, request, url_for, render_template, flash
 import flask_login
 import json
 
@@ -45,15 +45,7 @@ def request_loader(request):
 # @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'GET':
-        return '''
-               <form action='login' method='POST'>
-                <label for="fname">Email</label><br>
-                <input type='text' name='email' id='email'/><br>
-                <label for="fname">Password</label><br>
-                <input type='password' name='password' id='password'/><br>
-                <input type="submit" value="Submit">
-               </form>
-               '''
+        return render_template('login.html')
 
     email = request.form['email']
     if email in users:
@@ -63,15 +55,18 @@ def login():
             flask_login.login_user(user)
             return redirect(url_for('admin.index'))
         else:
-            return 'Bad password'
+            flash("The password is incorrect.", 'error')
+            return redirect(url_for('login'))
     else:
-        return 'Bad email'
+        flash("The email or password is incorrect.", 'error')
+        return redirect(url_for('login'))
 
-    return 'Bad login'
+    flash("Something went wrong.", 'error')
+    return redirect(url_for('login'))
 
 # @app.route('/logout')
 
 
 def logout():
     flask_login.logout_user()
-    return 'Logged out'
+    return render_template('message.html', message="You logged out. See you next time 👋️")
