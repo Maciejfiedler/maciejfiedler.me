@@ -93,6 +93,14 @@ export default {
   head() {
     return {
       title: "Maciej Fiedler's personal website.",
+      script: [
+        {
+          async: true,
+          defer: true,
+          data_domain: 'maciejfiedler.me',
+          src: 'https://172.26.0.1/js/plausible.js',
+        },
+      ],
       meta: [
         {
           charset: 'UTF-8',
