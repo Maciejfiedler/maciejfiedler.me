@@ -97,7 +97,7 @@ export default {
         {
           async: true,
           defer: true,
-          data_domain: 'maciejfiedler.me',
+          'data-domain': '172.26.0.101',
           src: 'https://172.26.0.1/js/plausible.js',
         },
       ],
@@ -112,7 +112,7 @@ export default {
         {
           name: 'keywords',
           content:
-            'Maciej Fiedler personal website me nuxtjs nuxt.js flask caddy docker github repository repo my website open-source ',
+            'maciej fiedler personal website me nuxtjs nuxt.js flask caddy docker github repository repo my website open source ',
         },
         {
           name: 'author',

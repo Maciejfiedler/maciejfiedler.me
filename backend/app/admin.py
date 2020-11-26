@@ -19,6 +19,10 @@ class MyAdminIndexView(flask_admin.AdminIndexView):
     def is_accessible(self):
         return flask_login.current_user.is_authenticated
 
+    @expose('/')
+    def index(self):
+        return super(MyAdminIndexView, self).index()
+
 
 # Set up logger
 log = logging.getLogger("flask-admin.redis")
