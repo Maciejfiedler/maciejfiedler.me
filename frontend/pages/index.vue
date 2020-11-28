@@ -97,8 +97,8 @@ export default {
         {
           async: true,
           defer: true,
-          'data-domain': '172.26.0.101',
-          src: 'https://172.27.0.1/js/plausible.js',
+          'data-domain': 'maciejfiedler.me',
+          src: 'https://analytics.maciejfiedler.me:800/js/plausible.js',
         },
       ],
       meta: [
