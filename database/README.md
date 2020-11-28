@@ -1,8 +1,8 @@
 After creation of the database set a password
 
     redis-cli
-    AUTH mypassword
+    AUTH "*password*"
     CONFIG SET requirepass "mypassword"
-    AUTH "mypassword"
+    AUTH "*password*"
     
 
