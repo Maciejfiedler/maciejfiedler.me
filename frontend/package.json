@@ -17,7 +17,8 @@
     "@nuxtjs/emotion": "^0.0.1",
     "core-js": "^3.6.5",
     "graphql-tag": "^2.11.0",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "plausible-tracker": "^0.3.1"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.7",

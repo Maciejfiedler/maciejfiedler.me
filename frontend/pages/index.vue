@@ -87,34 +87,31 @@
 /* eslint-disable vue/no-unused-components */
 import Chakra from '@chakra-ui/vue'
 import gql from 'graphql-tag'
+import Plausible from 'plausible-tracker'
 
+const plausible = Plausible({
+  domain: 'maciejfiedler.me',
+  apiHost: 'https://analytics.maciejfiedler.me:800/js/plausible.js',
+})
 export default {
   name: 'App',
   head() {
     return {
       title: "Maciej Fiedler's personal website.",
-      scripts: [
-        {
-          async: true,
-          defer: true,
-          'data-domain': 'maciejfiedler.me',
-          src: 'https://analytics.maciejfiedler.me:800/js/plausible.js',
-        },
-      ],
       meta: [
         {
-          charset: 'UTF-8',
-        },
-        {
+          hid: 'description',
           name: 'description',
           content: 'This website is a personal project to express myself. ',
         },
         {
+          hid: 'keywords',
           name: 'keywords',
           content:
             'maciej fiedler personal website me nuxtjs nuxt.js flask caddy docker github repository repo my website open source ',
         },
         {
+          hid: 'author',
           name: 'author',
           content: 'Maciej Fiedler ',
         },
