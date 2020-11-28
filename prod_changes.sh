@@ -1,2 +1,2 @@
-sudo docker-compose --file ./docker-compose-prod.yml build
-sudo docker-compose up --no-deps -d
+docker-compose --file ./docker-compose-prod.yml build
+docker-compose up --no-deps -d

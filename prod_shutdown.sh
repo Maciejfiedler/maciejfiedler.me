@@ -1,1 +1,1 @@
-sudo docker-compose --file ./docker-compose-prod.yml stop
+docker-compose --file ./docker-compose-prod.yml stop
