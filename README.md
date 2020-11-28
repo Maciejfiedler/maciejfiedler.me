@@ -2,6 +2,9 @@
 # maciejfiedler.me
 
 My website, that represents me and my interests. You can use this repository to setup your own personal website.
+
+![enter image description here](https://github.com/Maciejfiedler/maciejfiedler.me/raw/main/Assets/Screenshot.png)
+
 ## Setup
 The server runs in four Docker containers (webserver, frontend, backend and database).
 You have to have Docker on your system installed.
@@ -52,7 +55,6 @@ In Linux, MacOS and other Unix based systems:
 
 The Docker containers should now start.
 After starting the Docker containers go to `172.26.0.101` in you're browser.
-
 The browser that you're using will give you an error or a warning, because the website has a self-signed certificate, that browser don't trust (and you shouldn't on open website to). In production the warning will disappear, because the certificate is then signed by Let's Encrypt, a well known SSL/TLS  certificate signer.
 
 If you want to bypass that warning or error you have to use Firefox because, the will just give a warning and the option to proceed to the website.
