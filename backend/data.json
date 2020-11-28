@@ -1,0 +1,8 @@
+{ 
+    "users": {
+        "admin": {"password": "admin"}
+    },
+    "database": {
+        "redis_password": "mypassword"
+    }
+}

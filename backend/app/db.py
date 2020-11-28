@@ -1,7 +1,15 @@
 import redis
+import json
+
+with open('data.json') as myfile:
+    jsonfile = myfile.read()
+
+loadedjson = json.loads(jsonfile)
+password = loadedjson['database']['redis_password']
+print(password)
 
 r = redis.Redis(host='172.26.0.104', port=6379,
-                decode_responses=True)
+                decode_responses=True, password=password)
 
 
 def check_if_keys_exist():

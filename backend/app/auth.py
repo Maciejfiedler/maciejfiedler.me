@@ -2,7 +2,7 @@ from flask import redirect, request, url_for, render_template, flash
 import flask_login
 import json
 
-with open('users.json') as myfile:
+with open('data.json') as myfile:
     jsonfile = myfile.read()
 
 loadedjson = json.loads(jsonfile)

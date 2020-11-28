@@ -1,9 +1,12 @@
 # Do before running:
 
-Create users.json
+Create data.json
 
     { 
         "users": {
             "*username/email*": {"password": "*password*"}
+        },
+        "database": {
+            "redis_password": "*password*"
         }
     }

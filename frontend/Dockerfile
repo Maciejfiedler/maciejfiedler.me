@@ -18,5 +18,5 @@ EXPOSE 5000
 # CMD ["npm", "run", "dev"]
 
 # Prod
-RUN npm run generate
+RUN npm run build
 CMD ["npm", "run", "start"]
