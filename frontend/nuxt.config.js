@@ -2,6 +2,14 @@ export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: "Maciej Fiedler's personal website.",
+    script: [
+      {
+        async: true,
+        defer: true,
+        "data-domain":"maciejfiedler.me" ,
+        src: "https://analytics.maciejfiedler.me:800/js/plausible.js"
+      }
+    ],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

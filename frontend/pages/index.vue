@@ -87,12 +87,7 @@
 /* eslint-disable vue/no-unused-components */
 import Chakra from '@chakra-ui/vue'
 import gql from 'graphql-tag'
-import Plausible from 'plausible-tracker'
 
-const plausible = Plausible({
-  domain: 'maciejfiedler.me',
-  apiHost: 'https://analytics.maciejfiedler.me:800/js/plausible.js',
-})
 export default {
   name: 'App',
   head() {
