@@ -7,7 +7,7 @@ export default {
         async: true,
         defer: true,
         "data-domain":"maciejfiedler.me" ,
-        src: "https://analytics.maciejfiedler.me:800/js/plausible.js"
+        src: "http://analytics.maciejfiedler.me:800/js/plausible.js"
       }
     ],
     meta: [
