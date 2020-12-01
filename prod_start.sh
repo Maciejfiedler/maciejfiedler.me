@@ -1,2 +1,2 @@
-docker-compose --file ./docker-compose-prod.yml  up --build -d
+docker-compose --file ./docker-compose-prod.yml  up -d
 ./prod_changes.sh
