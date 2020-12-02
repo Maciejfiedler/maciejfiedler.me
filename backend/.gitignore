@@ -16,4 +16,4 @@ dist/
 build/
 *.egg-info/
 
-users.json
+data.json
