@@ -66,7 +66,9 @@ If you want to bypass that warning or error you have to use Firefox because, the
 
 # Feedback
 **Issues**
+
 If you find an error or have a problem, you can create an Issue on the Issues page. You can also send me an email at [maciek.fiedler@gmail.com](mailto:maciek.fiedler@gmail.com) and i will try to help you out.
 
 **Contribute**
+
 If you see a bug or want to contribute to the project, you can fork the repository and create a pull request.
