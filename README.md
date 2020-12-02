@@ -4,7 +4,7 @@
 
   
 
-My website, that represents me and my interests. You can use this repository to setup your own personal website.
+My website, that represents me and my interests. You can use this repository to setup your own personal website
 
   
 
