@@ -37,6 +37,7 @@ Creates these files in there their directory.
 	requirepass REDISPASSWORD
 
 **Important**
+
 Change REDISPASSWORD and ADMINPASSWORD to your password in production. Or else the website is vulnerable to attackers.
 
 If you want it to have it easy to start, change and stop the Docker containers there are scripts.
