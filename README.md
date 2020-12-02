@@ -49,10 +49,10 @@ Creates these files in there their directory.
  ```
 { 
     "users": {
-			"admin": {"password": "ADMINPASSWORD"}
+		"admin": {"password": "ADMINPASSWORD"}
     },
     "database": {
-			"redis_password": "REDISPASSWORD"
+		"redis_password": "REDISPASSWORD"
     }
 }
 ```
