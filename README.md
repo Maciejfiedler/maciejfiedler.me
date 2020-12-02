@@ -41,7 +41,7 @@ If you want it to have it easy to start, change and stop the Docker containers t
 
 If you're on Linux, MacOS or other Unix based systems you have to give those scrips permission to run them
 
-    chmod +x dev.sh prod_start.sh prod_changes.sh prod_stop.sh 
+    chmod +x dev.sh prod_start.sh prod_changes.sh prod_stop.sh prod_pause.sh prod_unpause.sh
 
 ### Starting the Server
 You can run the server with the `dev.sh` or `prod_start.sh` script. Use the `dev.sh` script for testing and developing and the `prod_start.sh` script for production (but I encourage to also test the production script before deploying to production).

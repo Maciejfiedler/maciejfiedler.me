@@ -1,5 +1,5 @@
 
-maciejfiedler.me {
+172.26.0.101 {
 	reverse_proxy /* 172.26.0.102:3000
 	reverse_proxy /admin/* 172.26.0.103:5000
 	reverse_proxy /api/* 172.26.0.103:5000

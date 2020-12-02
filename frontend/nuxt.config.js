@@ -52,7 +52,7 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'https://maciejfiedler.me/api/',
+        httpEndpoint: 'https://172.26.0.101/api/',
       }
     }
   },
