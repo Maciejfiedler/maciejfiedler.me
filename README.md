@@ -25,10 +25,10 @@ Creates these files in there their directory.
 ```
 { 
     "users": {
-	"admin": {"password": "V*Kp4%Kg0vjH*0qYvo9fh^#lA$At4ELdmB0pFXAVD"}
+	"admin": {"password": "ADMINPASSWORD"}
     },
     "database": {
-	"redis_password": "Mori^0a7F@7nKjbo1ljF0V$HXm@fi4Mnryxv89^%P"
+	"redis_password": "REDISPASSWORD"
     }
 }
 ```
