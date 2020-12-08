@@ -34,7 +34,9 @@ Creates these files in there their directory.
 ```
 *database/redis.conf*
 
-	requirepass REDISPASSWORD
+    requirepass REDISPASSWORD
+    appendonly yes
+
 
 **Important**
 
