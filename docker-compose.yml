@@ -2,6 +2,38 @@ version: "3"
 
 services:
 
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: strapi
+      POSTGRES_PASSWORD: strapi
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    networks:
+      website:
+        ipv4_address: 172.26.0.106
+
+  strapi:
+    image: strapi/strapi
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_NAME: strapi
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: strapi
+      DATABASE_PASSWORD: strapi
+    links:
+      - postgres:postgres
+    volumes:
+      - strapi-cms:/srv/app
+    ports:
+      - '1337:1337'
+    networks:
+      website:
+        ipv4_address: 172.26.0.105
+
   database:
     build:
       context: ./database
@@ -24,7 +56,6 @@ services:
     depends_on:
       - database
 
-        
   frontend:
     build:
       context: ./frontend
@@ -50,6 +81,12 @@ services:
     depends_on: 
       - frontend
       
+volumes:
+  postgres-db:
+    driver: local
+  strapi-cms:
+    driver: local
+
 networks:
   website:
     driver: bridge
