@@ -34,6 +34,7 @@ export default {
     '@chakra-ui/nuxt',
     // https://go.nuxtjs.dev/emotion
     '@nuxtjs/emotion',
+    '@nuxtjs/strapi'
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
@@ -56,4 +57,7 @@ export default {
       }
     }
   },
+  strapi: {
+    url: 'http://172.26.0.105:1337/'
+  }
 }

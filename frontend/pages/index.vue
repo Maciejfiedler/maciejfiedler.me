@@ -116,6 +116,19 @@ export default {
   components: {
     Chakra,
   },
+  async asyncData({ $strapi }: any) {
+    const response = await $strapi.graphql({
+      query: ` 
+        query getPosts{
+          posts{
+            id
+            title
+            content
+          }
+        }`,
+    })
+    return response
+  },
   apollo: {
     myStatus: gql`
       query getStatus {

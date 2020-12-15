@@ -1,14 +1,11 @@
-
 172.26.0.101 {
-	reverse_proxy /* 172.26.0.102:3000
-	route /admin/* {
-		reverse_proxy 172.26.0.103:5000
-	}
-	route /cms/* {
-		reverse_proxy 172.26.0.105:1337
-	}
+	reverse_proxy * 172.26.0.102:3000
+	reverse_proxy /admin/* 172.26.0.103:5000
 	reverse_proxy /api/* 172.26.0.103:5000
 	reverse_proxy /login 172.26.0.103:5000
 	reverse_proxy /logout 172.26.0.103:5000
 }
 
+172.26.0.101:1336 {
+	reverse_proxy * 172.26.0.105:1337
+}
