@@ -1,5 +1,5 @@
 <template>
-  <c-box w="500px" p="2" rounded="5px" bg="green.300">
+  <c-box w="500px" p="2" rounded="5px" bg="rgba(88,193,132,0.7)">
     <c-flex align="center" justify="center">
       <c-image
         w="480px"
