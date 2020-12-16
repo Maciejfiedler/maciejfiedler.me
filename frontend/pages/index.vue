@@ -65,6 +65,19 @@
           >
           <br />
           <c-flex align="center" justify="center">
+            <c-box bg="green.200" p="4" rounded="10px">
+              <c-heading as="h2" pt="4px" size="xl" textAlign="center"
+                >News</c-heading
+              >
+              <c-grid p="4" template-columns="repeat(2, 1fr)" gap="4">
+                <post_card></post_card>
+                <post_card></post_card>
+                <post_card></post_card>
+              </c-grid>
+            </c-box>
+          </c-flex>
+          <br />
+          <c-flex align="center" justify="center">
             <c-link
               bg="black"
               color="white"
@@ -87,6 +100,7 @@
 /* eslint-disable vue/no-unused-components */
 import Chakra from '@chakra-ui/vue'
 import gql from 'graphql-tag'
+import post_card from '../components/post_card.vue'
 
 export default {
   name: 'App',
@@ -115,6 +129,7 @@ export default {
   },
   components: {
     Chakra,
+    post_card,
   },
   async asyncData({ $strapi }: any) {
     const response = await $strapi.graphql({
