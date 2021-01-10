@@ -100,7 +100,6 @@
 /* eslint-disable vue/no-unused-components */
 import Chakra from '@chakra-ui/vue'
 import gql from 'graphql-tag'
-import post_card from '../components/post_card.vue'
 
 export default {
   name: 'App',
@@ -129,20 +128,6 @@ export default {
   },
   components: {
     Chakra,
-    post_card,
-  },
-  async asyncData({ $strapi }: any) {
-    const response = await $strapi.graphql({
-      query: ` 
-        query getPosts{
-          posts{
-            id
-            title
-            content
-          }
-        }`,
-    })
-    return response
   },
   apollo: {
     myStatus: gql`
