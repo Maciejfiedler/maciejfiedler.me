@@ -10,4 +10,4 @@ COPY . .
 
 ENV HOST 0.0.0.0
 
-CMD [ "gunicorn", "--bind", "0.0.0.0:5000", "setup:app" ]
+CMD [ "python", "-m", "flask", "run" ]

@@ -3,7 +3,6 @@ version: "3"
 services:
 
   database:
-    restart: always
     build:
       context: ./database
     container_name: prod_database
@@ -12,22 +11,34 @@ services:
         ipv4_address: 172.26.0.104
 
   backend:
-    restart: always
     build:
       context: ./backend
+      dockerfile: Dev-Dockerfile
     container_name: prod_backend
+    ports: 
+      - 5000:5000
+    volumes:
+      - ./backend:/app
     networks:
       website:
         ipv4_address: 172.26.0.103
+    environment:
+      - FLASK_APP=setup.py
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
     depends_on:
       - database
 
         
   frontend:
-    restart: always
     build:
       context: ./frontend
+      dockerfile: Dev-Dockerfile
     container_name: prod_frontend
+    ports: 
+      - 3000:3000
+    volumes:
+      - ./frontend:/app
     networks:
       website:
         ipv4_address: 172.26.0.102
@@ -35,7 +46,6 @@ services:
       - backend
 
   webserver:
-    restart: always
     build: 
       context: ./webserver
     container_name: prod_webserver
