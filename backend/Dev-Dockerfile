@@ -10,4 +10,4 @@ COPY . .
 
 ENV HOST 0.0.0.0
 
-CMD [ "python", "-m", "flask", "run" ]
+CMD [ "python", "-m", "flask", "run"]
